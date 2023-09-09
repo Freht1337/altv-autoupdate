@@ -5,6 +5,7 @@ rm -r modules
 rm -r data
 echo "[DELETE] deleted AltV.Net.Host.dll"
 echo "[DELETE] deleted AltV.Net.Host.runtimeconfig.json"
+echo "[DELETE] deleted altv-server file"
 echo "[DELETE] deleted modules folder"
 echo "[DELETE] deleted data folder"
 
