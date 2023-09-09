@@ -1,47 +1,46 @@
-rm -r core # delete core modules folder
-rm -r js-modules
-rm -r core-modules
+rm -r AltV.Net.Host.dll # delete core modules folder
+rm -r AltV.Net.Host.runtimeconfig.json
+rm -r modules
 rm -r data
-echo "[DELETE] deleted old core folder"
-echo "[DELETE] deleted old js modules folder"
-echo "[DELETE] deleted old core modules folder"
-echo "[DELETE] deleted old data folder"
+echo "[DELETE] deleted AltV.Net.Host.dll"
+echo "[DELETE] deleted AltV.Net.Host.runtimeconfig.json"
+echo "[DELETE] deleted modules folder"
+echo "[DELETE] deleted data folder"
 
 ## core server files
 
-mkdir "core" # Create core modules folder
-
 wget -q --show-progress https://cdn.alt-mp.com/coreclr-module/release/x64_linux/AltV.Net.Host.dll # download module
-mv AltV.Net.Host.dll ./core # move module
 #echo "downloaded altv.net.host.dll"
 
 wget -q --show-progress https://cdn.alt-mp.com/coreclr-module/release/x64_linux/AltV.Net.Host.runtimeconfig.json # download module
-mv AltV.Net.Host.runtimeconfig.json ./core # move module
 #echo "downloaded altv.net.host.runtimeconfig.json"
 
+wget -q --show-progress https://cdn.alt-mp.com/server/release/x64_linux/altv-server
+#echo "downloaded main altv-server file"
 
 ## core modules
-mkdir "core-modules"
+mkdir "modules"
 
 wget -q --show-progress https://cdn.alt-mp.com/coreclr-module/release/x64_linux/modules/libcsharp-module.so # download module
-mv libcsharp-module.so ./core-modules # move module
+mv libcsharp-module.so ./modules # move module
 #echo "downloaded libcsharp-module.so"
 
 wget -q --show-progress https://cdn.alt-mp.com/js-bytecode-module/release/x64_linux/modules/libjs-bytecode-module.so
-mv libjs-bytecode-module.so ./core-modules # move module
+mv libjs-bytecode-module.so ./modules # move module
 #echo "downloaded libjs-bytecode-module.so"
-
+cd "./modules"
 
 ## js modules
-mkdir "js-modules"
+mkdir "js-module"
 
 wget -q --show-progress https://cdn.alt-mp.com/js-module/release/x64_linux/modules/js-module/libjs-module.so # download module
-mv libjs-module.so ./js-modules # move module
+mv libjs-module.so ./js-module # move module
 #echo "downloaded libjs-module.so"
 
 wget -q --show-progress https://cdn.alt-mp.com/js-module/release/x64_linux/modules/js-module/libnode.so.108 # download module
-mv libnode.so.108 ./js-modules # move module
+mv libnode.so.108 ./js-module # move module
 #echo "downloaded libjs-module.so"
+cd ".."
 
 
 # data files
