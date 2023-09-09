@@ -1,5 +1,6 @@
 rm -r AltV.Net.Host.dll # delete core modules folder
 rm -r AltV.Net.Host.runtimeconfig.json
+rm -r altv-server
 rm -r modules
 rm -r data
 echo "[DELETE] deleted AltV.Net.Host.dll"
