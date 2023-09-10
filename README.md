@@ -1,5 +1,5 @@
 # altv-autoupdate
-This script can update your whole server (release branch only)
+This script can update your server to the latest release branch version
 
 # Information
 This script updates your server to the newest release branch the second you run it! (linux only)
