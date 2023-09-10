@@ -1,8 +1,8 @@
 # altv-autoupdate
-This script can update your server to the latest release branch version
+This script can update your server to the latest release branch version (linux only)
 
 # Information
-This script updates your server to the newest release branch the second you run it! (linux only)
+This script updates your server to the newest release branch version
 
 Just place the 'update.sh' in the main server folder that contains your server.toml/server.cfg
 
